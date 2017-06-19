@@ -1,10 +1,21 @@
 <html>
   <head>
+    <title>Example for monitor</title>
     <meta charset="utf-8" />
-    <script src="../src/monitor.js"></script>
+    <script src="../dist/jstracker.js"></script>
     <script src="http://cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://xxxxxxxxxxxxxx.com/xxxx.js"></script>
     <link  href="http://xxxxxxxxxxxxxx.com/xxxx.css" rel="stylesheet" type="text/css"/>
+    <script src="http://xxxxxxxxxxxxxx.com/xxxx.js"></script>
+
+    <script>
+      jstracker.init({
+        maxError: 26,
+        report: function(data) {
+          console.table(data)
+          console.log('发送请求')
+        }
+      })
+    </script>
   </head>
   <body>
     <img src="http://xxxxxxxxxxxxxx.com/xxxx.jpg" />
